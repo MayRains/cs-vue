@@ -6,17 +6,16 @@ import Ping from '@/components/Ping'
 import Qdxs from '@/components/qdxs'
 import Login from '@/components/login'
 import Home from '@/components/home'
+import Spring from '@/components/spring'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
-      path:'/',
+  routes: [{
+      path: '/',
       name: 'home',
       component: Home,
-      children: [
-        {
+      children: [{
           path: '/ktqd',
           name: 'ktqd',
           component: Ktqd
@@ -28,18 +27,23 @@ export default new Router({
         },
       ]
     },
-    
+
     {
-      path: '/ping',
-      name: 'ping',
-      component: Ping
+      path: '/spring',
+      name: 'spring',
+      component: Spring
     },
-    
+
     {
       path: '/login',
       name: 'login',
       component: Login
     },
-    
+    {
+      path: '/ping',
+      name: 'ping',
+      component: Ping
+    },
+
   ]
 })
