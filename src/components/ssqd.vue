@@ -3,14 +3,14 @@
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>签到入口</el-breadcrumb-item>
-      <el-breadcrumb-item>课堂签到</el-breadcrumb-item>
+      <el-breadcrumb-item>宿舍签到</el-breadcrumb-item>
     </el-breadcrumb>
     <div>
       <el-form :inline="true" class="demo-form-inline">
-        <el-form-item label="课程名">
+        <el-form-item label="宿舍楼号">
           <el-input v-model="user" name="user"></el-input>
         </el-form-item>
-        <el-form-item label="课程编号">
+        <el-form-item label="宿舍门牌号">
           <el-input v-model="cid" name="cid"></el-input>
         </el-form-item>
         <el-form-item>

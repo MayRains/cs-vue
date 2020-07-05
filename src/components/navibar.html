@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style type="text/css">
+  html, body {
+      height: 100%;
+      width: 100%;
+  }
+    body {
+      background-image: url(../assets/timg.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+
+      /* background-size:unset; */
+    }
+
+    ul {
+      list-style-type: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #h3 {
+      text-align: center;
+    }
+
+    li {
+      float: left;
+    }
+
+    a:link,
+    a:visited {
+      display: block;
+      width: 120px;
+      font-weight: bold;
+      color: #FFFFFF;
+      background-color: #bebebe;
+      text-align: center;
+      padding: 4px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    a:hover,
+    a:active {
+      background-color: #cc0000;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h3 id="h3">智能人脸识别签到系统</h3>
+  <ul>
+    <li><a href="sign_in" {% if navigation =='sign_in' %}style="background-color:#cc0000" {% endif %}>登录</a></li>
+    <li><a href="sign_up" {% if navigation =='sign_up' %}style="background-color:#cc0000" {% endif %}>注册</a></li>
+    <li><a href="">更新信息</a></li>
+    <li><a href="">签到记录</a></li>
+  </ul>
+  <script>
+    function sign_in() {
+      window.location.href = "sign_in";
+    }
+
+    function sign_up() {
+      window.location.href = "sign_up";
+    }
+
+  </script>
+</body>
+
+</html>

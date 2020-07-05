@@ -86,7 +86,7 @@ export default {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("uname", res.data.data.result);
         this.$router.push({ name: "home" });
-        this.$message.success("ok");
+        this.$message.success("管理员登录成功");
       }else{
         this.$message.error(res.data.data.message);
       }
@@ -137,7 +137,7 @@ export default {
         justify-content: center;
         align-items: Center;
         font-size: 32px;
-        color: rgba(0, 0, 0, 0.85);
+        color: black;
         font-family: "Myriad Pro", "Helvetica Neue", Arial, Helvetica,
           sans-serif;
         font-weight: 600;
@@ -166,7 +166,7 @@ export default {
       .title {
         margin: 0px auto 40px auto;
         text-align: center;
-        color: #505458;
+        color: black;
       }
       .remember {
         margin: 0px 0px 35px 0px;

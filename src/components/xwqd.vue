@@ -3,14 +3,14 @@
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>签到入口</el-breadcrumb-item>
-      <el-breadcrumb-item>课堂签到</el-breadcrumb-item>
+      <el-breadcrumb-item>校外签到</el-breadcrumb-item>
     </el-breadcrumb>
     <div>
       <el-form :inline="true" class="demo-form-inline">
-        <el-form-item label="课程名">
+        <el-form-item label="学生姓名">
           <el-input v-model="user" name="user"></el-input>
         </el-form-item>
-        <el-form-item label="课程编号">
+        <el-form-item label="学号">
           <el-input v-model="cid" name="cid"></el-input>
         </el-form-item>
         <el-form-item>
@@ -36,8 +36,8 @@ export default {
   },
   methods: {
     async onSubmit() {
-      const res = await this.$http.post("/class/upload", { cid: this.cid });
-      this.img = res.data;
+      const res = await this.$http.get("/user/do_sign_in");
+      // this.img = res.data;
       console.log(res.data);
     }
   }

@@ -5,7 +5,7 @@
         <el-breadcrumb separator-class="el-icon-arrow-right">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
           <el-breadcrumb-item>签到信息</el-breadcrumb-item>
-          <el-breadcrumb-item>课堂签到信息</el-breadcrumb-item>
+          <el-breadcrumb-item>宿舍签到信息</el-breadcrumb-item>
         </el-breadcrumb>
         <div>
           <el-form :inline="true" class="demo-form-inline">
