@@ -5,7 +5,7 @@
       <div class="info">
         <div class="title">
           <img src="@/assets/logo-blue.png" />
-          <span>Attendance System</span>
+          <span> Attendance System</span>
         </div>
         <div class="detail">
           <span>智能学生签到系统</span>
@@ -23,22 +23,12 @@
           <h3>管理员登录</h3>
         </div>
         <el-form-item prop="username">
-          <el-input
-            type="text"
-            v-model="ruleForm.username"
-            auto-complete="off"
-            placeholder=""
-          >
+          <el-input type="text" v-model="ruleForm.username" auto-complete="off" placeholder>
             <i slot="prefix" class="dbm d-icon-username"></i>
           </el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input
-            type="password"
-            v-model="ruleForm.password"
-            auto-complete="off"
-            placeholder=""
-          >
+          <el-input type="password" v-model="ruleForm.password" auto-complete="off" placeholder>
             <i slot="prefix" class="dbm d-icon-password"></i>
           </el-input>
         </el-form-item>
@@ -79,15 +69,15 @@ export default {
   computed: {},
   methods: {
     async handleSubmit() {
-      const res = await this.$http.post("/user/admin",this.ruleForm)
+      const res = await this.$http.post("/user/admin", this.ruleForm);
       console.log(res);
-      console.log(res.data.data.result)
+      console.log(res.data.data.result);
       if (res.data.data.code == 200) {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("uname", res.data.data.result);
         this.$router.push({ name: "home" });
         this.$message.success("管理员登录成功");
-      }else{
+      } else {
         this.$message.error(res.data.data.message);
       }
     },
@@ -147,7 +137,7 @@ export default {
       }
       .detail {
         font-size: 14px;
-        font-weight:700;
+        font-weight: 700;
         color: rgba(0, 0, 0, 0.45);
         margin-top: 12px;
         margin-bottom: 40px;
@@ -166,7 +156,7 @@ export default {
       .title {
         margin: 0px auto 40px auto;
         text-align: center;
-        color: black;
+        // color: black;
       }
       .remember {
         margin: 0px 0px 35px 0px;

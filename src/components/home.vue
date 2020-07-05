@@ -13,7 +13,10 @@
         <el-col :span="2">
           <div class="grid-content bg-purple">
             <a href="#" class="logout" @click.prevent="handleLogOut">
-              <strong>{{username}}</strong>
+              <i class="el-icon-user-solid">
+              
+                <strong>{{username}}</strong>
+              </i>
             </a>
           </div>
         </el-col>
@@ -88,7 +91,7 @@
               <i class="el-icon-info"></i>
               <span slot="title">数据统计</span>
             </template>
-            <el-menu-item index="5-1">
+            <el-menu-item index="charts">
               <i class="el-icon-s-data"></i>数据报表
             </el-menu-item>
           </el-submenu>
@@ -156,7 +159,7 @@ body,
   display: block;
   position: relative;
   overflow-y: scroll;
-  background-color:#545c64 !important;
+  background-color: #545c64 !important;
 }
 .el-main {
   background-color: #e9eef3;
@@ -167,7 +170,7 @@ body,
 
 h3 {
   color: blanchedalmond;
-  text-align: center;
+  text-align: left;
   line-height: 15px;
 }
 .logout {
@@ -176,7 +179,7 @@ h3 {
   color: blanchedalmond;
 }
 .avator {
-  .wh(9px, 9px);
+  .wh(20px, 20px);
   border-radius: 50%;
   margin-right: 13px;
 }

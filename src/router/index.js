@@ -61,6 +61,12 @@ export default new Router({
           path: '/addcourse',
           name: 'addcourse',
           component: AddCourse
+        },
+        {
+          path: '/charts',
+          name: 'charts',
+          component: Charts
+    
         }
       ]
     },
@@ -81,12 +87,7 @@ export default new Router({
       name: 'ping',
       component: Ping
     },
-    {
-      path: '/charts',
-      name: 'charts',
-      component: Charts
-
-    }
+   
 
   ]
 })
