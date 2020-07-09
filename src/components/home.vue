@@ -14,7 +14,6 @@
           <div class="grid-content bg-purple">
             <a href="#" class="logout" @click.prevent="handleLogOut">
               <i class="el-icon-user-solid">
-              
                 <strong>{{username}}</strong>
               </i>
             </a>
@@ -54,49 +53,46 @@
               <i class="el-icon-star-on"></i>
               <span slot="title">签到信息</span>
             </template>
-            <el-menu-item index="qdxs">
-              <i class="el-icon-s-custom"></i>课堂签到信息
-            </el-menu-item>
-            <el-menu-item index="qdxsss">
-              <i class="el-icon-s-check"></i>宿舍签到信息
-            </el-menu-item>
-            <el-menu-item index="qdxsxw">
-              <i class="el-icon-s-check"></i>校外签到信息
-            </el-menu-item>
+            <el-submenu index="1-7">
+              <template slot="title">签到信息查看</template>
+              <el-menu-item index="qdxs">课堂签到信息</el-menu-item>
+              <el-menu-item index="qdxsss">宿舍签到信息</el-menu-item>
+              <el-menu-item index="qdxsxw">校外签到信息</el-menu-item>
+            </el-submenu>
+            <el-submenu index="1-8">
+              <template slot="title">签到信息管理</template>
+              <el-menu-item index="qdxs">课堂签到信息管理</el-menu-item>
+              <el-menu-item index="qdxsss">宿舍签到信息管理</el-menu-item>
+              <el-menu-item index="qdxsxw">校外签到信息管理</el-menu-item>
+            </el-submenu>
+            <el-submenu index="1-9">
+              <template slot="title">数据可视化分析</template>
+              <el-menu-item index="charts" style="font-size:5px">课堂签到信息可视化</el-menu-item>
+            </el-submenu>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-s-goods"></i>
               <span slot="title">后台管理</span>
             </template>
-            <el-menu-item index="addstu">
-              <i class="el-icon-s-shop"></i>学生信息管理
-            </el-menu-item>
-             <el-menu-item index="stuinfo">
-              <i class="el-icon-s-shop"></i>学生信息查看
-            </el-menu-item>
-            <el-menu-item index="addcourse">
-              <i class="el-icon-question"></i>课程信息
-            </el-menu-item>
-            <!-- <el-menu-item index="3-3"><i class="el-icon-goods"></i></el-menu-item> -->
-          </el-submenu>
-          <el-submenu index="4">
-            <template slot="title">
-              <i class="el-icon-s-order"></i>
-              <span slot="title">聊天室</span>
-            </template>
-            <el-menu-item index="ktqd">
-              <i class="el-icon-s-promotion"></i>请假
-            </el-menu-item>
+            <el-submenu index="1-4">
+              <template slot="title">学生信息管理</template>
+              <el-menu-item index="addstu">学生信息增加</el-menu-item>
+              <el-menu-item index="stuinfo">学生信息修改</el-menu-item>
+            </el-submenu>
+            <el-submenu index="1-5">
+              <template slot="title">课程信息管理</template>
+              <el-menu-item index="addcourse">课程信息增加</el-menu-item>
+              <el-menu-item index="1-5-2">课程信息修改</el-menu-item>
+            </el-submenu>
           </el-submenu>
           <el-submenu index="5">
             <template slot="title">
               <i class="el-icon-info"></i>
-              <span slot="title">数据统计</span>
+              <span slot="title">用户个人中心</span>
             </template>
-            <el-menu-item index="charts">
-              <i class="el-icon-s-data"></i>数据报表
-            </el-menu-item>
+            <el-menu-item index="teacher">教师账户信息管理</el-menu-item>
+            <el-menu-item index="student">学生账户信息管理</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>

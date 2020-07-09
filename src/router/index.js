@@ -15,6 +15,8 @@ import AddCourse from '@/components/addCourse'
 import Qdxsss from '@/components/qdxsss'
 import Qdxsxw from '@/components/qdxsxw'
 import Stuinfo from '@/components/stuinfo'
+import Teacherinfo from '@/components/teacherinfo'
+import Studentinfo from '@/components/studentinfo'
 Vue.use(Router)
 
 export default new Router({
@@ -73,6 +75,18 @@ export default new Router({
           path: '/stuinfo',
           name: 'stuinfo',
           component: Stuinfo
+    
+        },
+        {
+          path: '/teacher',
+          name: 'teacher',
+          component: Teacherinfo
+    
+        },
+        {
+          path: '/student',
+          name: 'sttudent',
+          component: Studentinfo
     
         }
       ]
