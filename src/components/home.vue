@@ -70,7 +70,10 @@
               <span slot="title">后台管理</span>
             </template>
             <el-menu-item index="addstu">
-              <i class="el-icon-s-shop"></i>学生信息
+              <i class="el-icon-s-shop"></i>学生信息管理
+            </el-menu-item>
+             <el-menu-item index="stuinfo">
+              <i class="el-icon-s-shop"></i>学生信息查看
             </el-menu-item>
             <el-menu-item index="addcourse">
               <i class="el-icon-question"></i>课程信息

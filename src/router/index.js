@@ -14,6 +14,7 @@ import AddStudents from '@/components/addStudents'
 import AddCourse from '@/components/addCourse'
 import Qdxsss from '@/components/qdxsss'
 import Qdxsxw from '@/components/qdxsxw'
+import Stuinfo from '@/components/stuinfo'
 Vue.use(Router)
 
 export default new Router({
@@ -66,6 +67,12 @@ export default new Router({
           path: '/charts',
           name: 'charts',
           component: Charts
+    
+        },
+        {
+          path: '/stuinfo',
+          name: 'stuinfo',
+          component: Stuinfo
     
         }
       ]

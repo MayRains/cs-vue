@@ -18,12 +18,10 @@
           </el-form>
           <el-table :data="tableData" stripe border style="width: 100%">
             <el-table-column prop="id" label="ID" width="180"></el-table-column>
-            <el-table-column prop="cid" label="course id" width="180"></el-table-column>
             <el-table-column prop="sid" label="student id" width="180"></el-table-column>
-            <el-table-column prop="cname" label="course name" width="300"></el-table-column>
-            <el-table-column prop="sname" label="student name" width="200"></el-table-column>
-            <el-table-column prop="qdtime" label="attendance time" width="400"></el-table-column>
-            <el-table-column prop="qdaddress" label="attendance address"></el-table-column>
+            <el-table-column prop="sname" label="student name" width="300"></el-table-column>
+            <el-table-column prop="address" label="attendance address"></el-table-column>
+            <el-table-column prop="time" label="attendance time"></el-table-column>
           </el-table>
         </div>
       </el-card>
@@ -43,7 +41,7 @@ export default {
   methods: {
     async loadData() {
       this.loading = true;
-      const data = await this.$http.get("/class/qdxs");
+      const data = await this.$http.get("/user/getOutInfo");
       let arr = [];
       for (let i in data.data) {
         arr.push(data.data[i]);
@@ -63,5 +61,8 @@ export default {
 .box-card {
   width: 100%;
   height: 100%;
+}
+.el-input{
+  width: 300px;
 }
 </style>
