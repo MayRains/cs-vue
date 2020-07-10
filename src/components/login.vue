@@ -20,7 +20,7 @@
         class="demo-ruleForm login-container"
       >
         <div class="title">
-          <h3>管理员登录</h3>
+          <h3 style="text-align: center;color:black">用户登录</h3>
         </div>
         <el-form-item prop="username">
           <el-input type="text" v-model="ruleForm.username" auto-complete="off" placeholder>
@@ -76,7 +76,7 @@ export default {
         localStorage.setItem("token", res.data.data.token);
         localStorage.setItem("uname", res.data.data.result);
         this.$router.push({ name: "home" });
-        this.$message.success("管理员登录成功");
+        this.$message.success("登录成功");
       } else {
         this.$message.error(res.data.data.message);
       }
@@ -107,6 +107,7 @@ export default {
 .login-page {
   width: 100%;
   height: 100%;
+  
   background-image: url(../assets/login-back.svg);
   background-repeat: no-repeat;
   background-position: center 110px;
@@ -143,6 +144,7 @@ export default {
         margin-bottom: 40px;
       }
     }
+    
 
     .login-container {
       -webkit-border-radius: 5px;
@@ -150,7 +152,7 @@ export default {
       -moz-border-radius: 5px;
       background-clip: padding-box;
       padding: 35px 35px 15px 35px;
-      background: #fff;
+      background: gainsboro;
       border: 1px solid #eaeaea;
       box-shadow: 0 0 25px #cac6c6;
       .title {
@@ -181,4 +183,6 @@ export default {
     text-decoration: none;
   }
 }
+
+
 </style>

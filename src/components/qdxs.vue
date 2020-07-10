@@ -25,6 +25,8 @@
             <el-table-column prop="qdtime" label="attendance time" width="400"></el-table-column>
             <el-table-column prop="qdaddress" label="attendance address"></el-table-column>
           </el-table>
+          <el-pagination background layout="prev, pager, next" :total="400"></el-pagination>
+
         </div>
       </el-card>
     </template>
@@ -63,5 +65,8 @@ export default {
 .box-card {
   width: 100%;
   height: 100%;
+}
+.el-pagination {
+  margin-top: 30px;
 }
 </style>

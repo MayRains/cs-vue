@@ -8,7 +8,7 @@
     <div>
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item label="课程名">
-          <el-input v-model="user" name="user"></el-input>
+          <el-input v-model="classname" name="user"></el-input>
         </el-form-item>
         <el-form-item label="课程编号">
           <el-input v-model="cid" name="cid"></el-input>
@@ -22,8 +22,10 @@
         <img :src="'data:image/png;base64,'+img" alt />
       </div>
 
-      <el-form :inline="false" class="demo-form-inline">
+      <div class="h3set">
         <h3>Course Details</h3>
+      </div>
+      <el-form :inline="false" class="demo-form-inline">
         <el-form-item label="课程名称">
           <el-input v-model="classname" :disabled="true"></el-input>
           <!-- <el-input placeholder="{{cid}}">{cid{this.cid}}</el-input> -->
@@ -135,5 +137,7 @@ export default {
 .el-input {
   width: 300px;
 }
-
+.h3set {
+  color: black;
+}
 </style>
