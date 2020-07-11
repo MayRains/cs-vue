@@ -24,6 +24,7 @@
             <el-table-column prop="sname" label="student name" width="200"></el-table-column>
             <el-table-column prop="qdtime" label="attendance time" width="400"></el-table-column>
             <el-table-column prop="qdaddress" label="attendance address"></el-table-column>
+           
           </el-table>
           <el-pagination background layout="prev, pager, next" :total="400"></el-pagination>
 

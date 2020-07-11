@@ -22,7 +22,13 @@
             <el-table-column prop="sname" label="student name" width="300"></el-table-column>
             <el-table-column prop="address" label="attendance address"></el-table-column>
             <el-table-column prop="time" label="attendance time"></el-table-column>
+             <el-table-column prop="images" label="images">
+                <template slot-scope="scope">
+                  <img :src="'data:image/png;base64,'+scope.row.images" width="75" height="80" alt />
+                </template>
+            </el-table-column>
           </el-table>
+          <el-pagination background layout="prev, pager, next" :total="100"></el-pagination>
         </div>
       </el-card>
     </template>
@@ -64,5 +70,9 @@ export default {
 }
 .el-input{
   width: 300px;
+}
+
+.el-pagination {
+  margin-top: 30px;
 }
 </style>
